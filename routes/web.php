@@ -17,7 +17,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-
-Route::post('/webhook/paymob', [WebhookController::class, 'handleWebhook']);
-Route::get('/webhook/paymob/response', [WebhookController::class, 'handleTransactionResponse']);
