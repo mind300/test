@@ -19,5 +19,5 @@ Route::get('/', function () {
 });
 
 
-Route::post('/webhook/paymob', [WebhookController::class, 'handleWebhook']);
-Route::post('/webhook/paymob/response', [WebhookController::class, 'handleTransactionResponse']);
+Route::get('/webhook/paymob', [WebhookController::class, 'handleWebhook']);
+Route::get('/webhook/paymob/response', [WebhookController::class, 'handleTransactionResponse']);
