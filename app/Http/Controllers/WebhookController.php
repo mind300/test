@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 class WebhookController extends Controller
 {
-
     public function handleWebhook(Request $request)
     {
         // Handle transaction processed callback
