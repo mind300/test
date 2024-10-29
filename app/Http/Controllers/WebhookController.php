@@ -11,6 +11,7 @@ class WebhookController extends Controller
     // Handle transaction processed callback
     public function handleProccessd(Request $request)
     {
+        dd($request->all());
         $user = User::find(1);
         $user->notify(new SendMail);
         return response()->json(['Send' => 200]);
