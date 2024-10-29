@@ -10,6 +10,7 @@ class WebhookController extends Controller
     {
         // Handle transaction processed callback
         $data = $request->all();
+        dd("Processed");
         // Process the data as before
     }
 
@@ -17,6 +18,7 @@ class WebhookController extends Controller
     {
         // Handle transaction response callback
         $data = $request->all();
+        dd("Response");
         // Process the response data here
     }
 }
