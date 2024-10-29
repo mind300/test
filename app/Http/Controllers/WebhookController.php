@@ -16,9 +16,16 @@ class WebhookController extends Controller
 
     public function handleTransactionResponse(Request $request)
     {
-        // Handle transaction response callback
-        $data = $request->all();
-        dd("Response");
-        // Process the response data here
+        // Log the incoming data to check what you receive
+        \Log::info('Transaction Response Webhook received:', $request->all());
+
+        // Process the GET request data as needed
+        // For example, extract parameters from the query string
+        $transactionId = $request->query('transaction_id');
+
+        // Implement your logic here
+        // ...
+
+        return response()->json(['status' => 'received'], 200);
     }
 }
